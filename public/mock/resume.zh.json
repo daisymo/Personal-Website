@@ -1,0 +1,428 @@
+{
+  "profile": {
+    "name": "Aster",
+    "title": "前端开发工程师",
+    "summary": "具备从 0 到 1 构建高并发、高复用前端架构的经验。深耕 Vue 技术栈，可快速在 Vue/React 之间切换并与团队协同。善于将 AI 能力融入前端工程化与产品交互设计，在研发提效与智能化体验方面有丰富实践。主导过智慧校园、AI 体育、金融服务、车联网等多领域复杂系统建设，对海量数据可视化、实时交互及 AI 大模型前端集成有深入积累，具备框架无关的架构设计思维。",
+    "motto": "用构建感，换取每一次可信赖的体验。",
+    "location": "杭州",
+    "avatar": null
+  },
+  "projects": [
+    {
+      "id": "p0",
+      "slug": "personal-portfolio",
+      "title": "个人作品集网站",
+      "summary": "双语在线简历 · AI 对话助手与性能优化",
+      "company": "个人项目",
+      "introduction": "基于 React 打造的个人作品集与在线简历站点，支持中英文切换，整合项目案例、职业经历、技能图谱与爱好详情页；内置 AI 对话助手，可基于简历内容回答访客提问，并针对首屏加载与包体积做了系统性优化。",
+      "responsibilities": [
+        "独立完成站点信息架构与 UI 实现，覆盖首页、项目列表/详情、爱好专题页等多层路由结构",
+        "集成 AI 对话模块，支持基于简历上下文的智能问答与访客互动",
+        "实施路由懒加载、组件按需挂载与构建分包，显著压缩首屏 JavaScript 体积"
+      ],
+      "outcomes": [
+        "全站响应式适配移动端，爱好模块支持摄影、阅读、徒步、音乐等沉浸式详情体验",
+        "主业务包压缩至约 21KB，配合 LazyMotion 在保证动效的同时控制依赖体积"
+      ],
+      "skills": ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "React Router"],
+      "categories": ["personal", "ai"],
+      "image": "/projects/p0.svg"
+    },
+    {
+      "id": "p1",
+      "slug": "lezhixing-smart-campus",
+      "title": "乐知行智慧校园",
+      "summary": "K12 AI 智慧校园管理平台 · 安全/宿管/家校互通",
+      "company": "杭州乐知行教育科技有限公司",
+      "introduction": "面向 K12 的 AI 驱动型智慧校园管理平台，覆盖安全、宿管、心理健康、家校互通等场景，通过人脸识别、行为分析、AI 告警等技术实现校园安全前置预防，日均处理行为数据超百万条。",
+      "responsibilities": [
+        "封装基于 Ant Design 的业务组件库（轨迹图、行为卡片、告警列表、大屏组件等），提升跨模块复用率",
+        "利用 JSON Schema 动态生成教务、宿管、访客预约等复杂表单，减少重复开发"
+      ],
+      "outcomes": [
+        "通过 Canvas 绘制与虚拟滚动优化渲染性能，首屏加载速度提升 30%+",
+        "结合 AI 分析，采用数据切片与智能预加载策略"
+      ],
+      "skills": ["Vue3", "React", "TypeScript", "Vite", "Ant Design", "ECharts"],
+      "categories": ["work", "ai"],
+      "image": "/projects/p1.svg"
+    },
+    {
+      "id": "p2",
+      "slug": "lingkang-yuedong",
+      "title": "智慧校园管理平台 / 领康悦动",
+      "summary": "体质健康管理与智慧体育生态 · 多端小程序",
+      "company": "江苏领康电子科技发展有限公司杭州分公司",
+      "introduction": "面向全国的体质健康管理与智慧体育生态平台，融合体测、课堂、赛事、管理等场景，支持海量运动数据实时采集与分析，提供个性化运动指导。",
+      "responsibilities": [
+        "设计统一登录与权限体系，实现多系统跨平台无缝跳转",
+        "兼容旧设备蓝牙接入及多种 AI 运动采集模式，保障数据稳定性与实时性",
+        "组件库与模块化架构，减少重复代码 30%+"
+      ],
+      "outcomes": [
+        "实时生成个性化运动处方，使数据报告从「可视化」升级为「可对话」",
+        "参数化配置支撑第三方小程序快速上线，交付周期缩短 40%"
+      ],
+      "skills": ["Vue3", "Uni-app", "Pinia", "Vite", "TypeScript", "Ant Design", "ECharts"],
+      "categories": ["work", "ai"],
+      "image": "/projects/p2.svg"
+    },
+    {
+      "id": "p3",
+      "slug": "fitness-master",
+      "title": "体测大师",
+      "summary": "AI 图像识别体育教育 · 教学训练评估一体化",
+      "company": "浙江壹体科技有限公司",
+      "introduction": "基于图像识别的 AI 体育教育平台，通过智能行为分析将运动过程游戏化，支持跳绳、跑步等中考专项训练，形成教学、训练与评估一体化闭环。",
+      "responsibilities": [
+        "落地高复用组件库与开发规范，减少冗余代码 30%",
+        "构建数据可视化大屏，支撑运动会及体测业务实时决策"
+      ],
+      "outcomes": [
+        "清理冗余资源并引入缓存策略，平台整体性能提升 20%+",
+        "优化 Canvas 绘制流程，提升 AI 运动识别画面渲染质量"
+      ],
+      "skills": ["Vue3","Vue2", "Vite", "Webpack",  "Ant Design", "高德地图", "Canvas"],
+      "categories": ["work", "ai"],
+      "image": "/projects/p3.svg"
+    },
+    {
+      "id": "p4",
+      "slug": "mobile-insurance-management",
+      "title": "掌上银保管理系统",
+      "summary": "银保团队管理平台 · 企微整合与险种计算",
+      "company": "杭州微易信息科技有限公司",
+      "introduction": "为银保团队提供便捷管理平台，集成权限管理、在线客服、日志追踪等功能，与企业微信深度整合，支持复杂保险产品组合计算。",
+      "responsibilities": [
+        "权限系统与企业微信扫码登录，提升安全性与易用性",
+        "搜索、过滤与日志追踪，支持数据高效查询与追溯",
+        "集成在线客服模块，提升用户满意度"
+      ],
+      "outcomes": [
+        "数据可视化助力业务分析",
+        "性能优化与打包策略调整，包体积缩减约 35%"
+      ],
+      "skills": ["Vue2", "Webpack", "Ant Design", "企微"],
+      "categories": ["work"],
+      "image": "/projects/p4.svg"
+    },
+    {
+      "id": "p5",
+      "slug": "pocket-finance",
+      "title": "掌上有财",
+      "summary": "跨端金融服务平台 · Taro 小程序 + H5",
+      "company": "杭州微易信息科技有限公司",
+      "introduction": "面向贷款经纪人与客户的跨端服务平台，同时支持小程序（经纪人端）与 H5（客户端），要求快速迭代、高稳定性及精准用户行为分析。",
+      "responsibilities": [
+        "引入 Taro 框架，支撑快速迭代与长期维护",
+        "封装兼容性组件库，解决 Vant 在 H5 下的样式与交互问题"
+      ],
+      "outcomes": [
+        "阿里云验证与数据埋点，防止恶意刷接口",
+        "微信 API 实现精准用户行为分析",
+        "分包与懒加载，核心页面加载速度提升 40%，包体积减小 35%"
+      ],
+      "skills": ["Taro", "Vue2", "Vant", "TypeScript", "Webpack"],
+      "categories": ["work"],
+      "image": "/projects/p5.svg"
+    },
+    {
+      "id": "p6",
+      "slug": "taxi-fleet-platform",
+      "title": "出租汽车综合应用平台",
+      "summary": "交通治安监控 · 实时大屏与轨迹回放",
+      "company": "杭州车厘子智能科技有限公司",
+      "introduction": "基于自研车载硬件的交通治安监控平台，提供车辆实时监控、轨迹回放、围栏管理、热力图分析等功能。",
+      "responsibilities": [
+        "独立开发监控大屏、轨迹回放、司机信息、红包发放等前端模块",
+        "深度封装高德地图、腾讯实时视频流等 SDK"
+      ],
+      "outcomes": [
+        "优化复杂表格过滤与检索逻辑，查询效率提升 50%",
+        "推动 UI 体系重构，提升交互一致性"
+      ],
+      "skills": ["Vue2", "Element UI", "Webpack", "ECharts", "高德地图"],
+      "categories": ["work"],
+      "image": "/projects/p6.svg"
+    },
+    {
+      "id": "p7",
+      "slug": "16hour-news",
+      "title": "16HOUR 资讯平台",
+      "summary": "生活服务资讯 · WebView App 与大型活动 H5",
+      "company": "成都拓元文化传播有限公司",
+      "introduction": "生活服务资讯平台，覆盖国际、国内、本土等多类别热点资讯，支持高频活动运营与多端适配。",
+      "responsibilities": [
+        "负责日常迭代与大型活动 H5，解决多端适配与兼容性",
+        "丰富后台文章编辑功能，提高内容产出效率"
+      ],
+      "outcomes": [
+        "提升活动落地页加载与交互体验"
+      ],
+      "skills": ["jQuery", "H5", "WebView", "Zepto", "微信 SDK", "百度地图"],
+      "categories": ["work"],
+      "image": "/projects/p7.svg"
+    }
+  ],
+  "experience": [
+    {
+      "id": "e1",
+      "company": "江苏领康电子科技发展有限公司杭州分公司",
+      "role": "前端组长",
+      "period": "2023.12 — 2025.08",
+      "highlights": [
+        "负责多业务线（管理后台、Pad、小程序）及第三方代开发小程序的前端架构与核心研发",
+        "统筹性能优化策略，引入 AI 辅助 Code Review 与组件生成流程，提升团队研发效能",
+        "主导前端技术栈选型与工程化体系搭建，建立并维护组件库与模块化架构",
+        "负责前端招聘与新人培养"
+      ]
+    },
+    {
+      "id": "e2",
+      "company": "浙江壹体科技有限公司",
+      "role": "前端组长",
+      "period": "2022.05 — 2023.10",
+      "highlights": [
+        "全面负责校园体育信息化系统（Web/App）的前端架构与技术选型",
+        "建立组件库与工具函数库，降低重复开发工作量约 30%",
+        "制定前端标准化开发规范，担任代码评审负责人",
+        "负责前端招聘与新人培养"
+      ]
+    },
+    {
+      "id": "e3",
+      "company": "杭州微易信息科技有限公司",
+      "role": "前端开发工程师",
+      "period": "2019.10 — 2022.04",
+      "highlights": [
+        "独立负责掌上银保、掌上有财项目从 0 到 1 的前端架构与开发",
+        "负责保险师管理平台、掌上职场 APP 等系统的开发与维护",
+        "探索大模型 API 在金融保险场景的前端应用与跨端兼容方案",
+        "组织技术分享会（Taro、微前端），推动团队技术氛围建设"
+      ]
+    },
+    {
+      "id": "e4",
+      "company": "成都拓元文化传播有限公司",
+      "role": "前端负责人",
+      "period": "2016.07 — 2019.09",
+      "highlights": [
+        "负责公司 WebView App 与大型活动 H5 项目，覆盖百万级用户",
+        "负责平台前端核心功能开发及项目推进",
+        "解决多端适配与兼容性问题，UI 重构与交互体验优化，搭建组件库",
+        "参与需求排期与前端架构设计，保障高频运营活动快速上线"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "语言基础",
+      "items": [
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "浏览器渲染原理",
+        "网络协议"
+      ]
+    },
+    {
+      "category": "前端框架",
+      "items": [
+        "Vue 2 / Vue 3",
+        "Vue Router",
+        "Composition API",
+        "Pinia / Vuex",
+        "React"
+      ]
+    },
+    {
+      "category": "跨端与工程化",
+      "items": [
+        "Taro",
+        "Uni-app",
+        "微信小程序",
+        "Webpack",
+        "Vite",
+        "Qiankun 微前端"
+      ]
+    },
+    {
+      "category": "性能与 UI",
+      "items": [
+        "首屏/按需加载",
+        "虚拟列表",
+        "前端监控埋点",
+        "Ant Design",
+        "Element UI",
+        "ECharts",
+        "Canvas"
+      ]
+    },
+    {
+      "category": "AI 与其他",
+      "items": [
+        "Cursor / Copilot / ChatGPT",
+        "AIGC 工程化",
+        "Python 数据采集",
+        "OAuth2 / CAS 单点登录"
+      ]
+    }
+  ],
+  "about": {
+    "quote": {
+      "id": "q1",
+      "text": "代码是写给人看的，只是顺便能在机器上运行。",
+      "author": "Harold Abelson"
+    },
+    "credentials": [
+      { "id": "c1", "name": "高级人工智能训练师", "icon": "🎓" },
+      { "id": "c2", "name": "数据爬虫", "icon": "🕸️" },
+      { "id": "c3", "name": "AI 工程", "icon": "⚡" }
+    ],
+    "hobbies": [
+      {
+        "id": "h1",
+        "slug": "photography",
+        "name": "摄影",
+        "icon": "📷",
+        "detail": "用镜头记录光影与日常，偏爱街拍与自然光下的细节构图。",
+        "photos": [
+          { "id": "ph1", "src": "/hobbies/photos/152426.jpg" },
+          { "id": "ph2", "src": "/hobbies/photos/152428.jpg" },
+          { "id": "ph3", "src": "/hobbies/photos/152431.jpg" },
+          { "id": "ph4", "src": "/hobbies/photos/152435.jpg" },
+          { "id": "ph5", "src": "/hobbies/photos/152439.jpg" },
+          { "id": "ph6", "src": "/hobbies/photos/152444.jpg" },
+          { "id": "ph7", "src": "/hobbies/photos/152447.jpg" },
+          { "id": "ph8", "src": "/hobbies/photos/152457.jpg" },
+          { "id": "ph9", "src": "/hobbies/photos/152501.jpg" },
+          { "id": "ph10", "src": "/hobbies/photos/152505.jpg" },
+          { "id": "ph11", "src": "/hobbies/photos/152510.jpg" },
+          { "id": "ph12", "src": "/hobbies/photos/152519.jpg" },
+          { "id": "ph13", "src": "/hobbies/photos/152523.jpg" },
+          { "id": "ph14", "src": "/hobbies/photos/152527.jpg" },
+          { "id": "ph15", "src": "/hobbies/photos/152531.jpg" },
+          { "id": "ph16", "src": "/hobbies/photos/152534.jpg" },
+          { "id": "ph17", "src": "/hobbies/photos/152538.jpg" },
+          { "id": "ph18", "src": "/hobbies/photos/152542.jpg" },
+          { "id": "ph19", "src": "/hobbies/photos/152545.jpg" },
+          { "id": "ph20", "src": "/hobbies/photos/152552.jpeg" }
+        ]
+      },
+      {
+        "id": "h2",
+        "slug": "reading",
+        "name": "阅读",
+        "icon": "📚",
+        "detail": "技术、设计与随笔类读物为主，习惯在通勤与睡前保持阅读习惯。",
+        "reading": {
+          "read": [
+            { "id": "r1", "title": "重构：改善既有代码的设计", "author": "Martin Fowler" },
+            { "id": "r2", "title": "设计心理学", "author": "Don Norman" },
+            { "id": "r3", "title": "小王子", "author": "Saint-Exupéry" },
+            { "id": "r4", "title": "人月神话", "author": "Fred Brooks" }
+          ],
+          "reading": [
+            { "id": "r5", "title": "领域驱动设计", "author": "Eric Evans" },
+            { "id": "r6", "title": "写给大家看的设计书", "author": "Robin Williams" }
+          ],
+          "wish": [
+            { "id": "r7", "title": "哥德尔、艾舍尔、巴赫", "author": "Hofstadter" },
+            { "id": "r8", "title": "看不见的城市", "author": "Calvino" }
+          ]
+        }
+      },
+      {
+        "id": "h3",
+        "slug": "hiking",
+        "name": "爬山",
+        "icon": "🥾",
+        "detail": "周末短途徒步，享受节奏感与登顶后的开阔视野。",
+        "peaks": [
+          { "id": "m1", "name": "八达岭", "region": "北京", "elevation": "888m" },
+          { "id": "m2", "name": "大明山", "region": "浙江", "elevation": "1487m" },
+          { "id": "m3", "name": "径山", "region": "浙江", "elevation": "769m" },
+          { "id": "m4", "name": "黄山", "region": "安徽", "elevation": "1864m" },
+          { "id": "m5", "name": "青城山", "region": "四川", "elevation": "1260m" },
+          { "id": "m6", "name": "中山", "region": "江苏", "elevation": "448m" },
+          { "id": "m7", "name": "骊山", "region": "陕西", "elevation": "1302m" },
+          { "id": "m8", "name": "虎丘山", "region": "江苏", "elevation": "34m" },
+          { "id": "m9", "name": "三清山", "region": "江西", "elevation": "1817m" },
+          { "id": "m10", "name": "武功山", "region": "江西", "elevation": "1918m" },
+          { "id": "m11", "name": "禾木美丽峰", "region": "新疆", "elevation": "2848m" },
+          { "id": "m12", "name": "喀纳斯观鱼台", "region": "新疆", "elevation": "1060m" }
+        ]
+      },
+      {
+        "id": "h4",
+        "slug": "archery",
+        "name": "射箭",
+        "icon": "🏹",
+        "detail": "注重专注与呼吸节奏，把射箭当作调节心性的运动。"
+      },
+      {
+        "id": "h5",
+        "slug": "music",
+        "name": "音乐",
+        "icon": "🎵",
+        "detail": "工作时常听器乐与氛围音乐，偶尔弹吉他放松。",
+        "tracks": [
+          {
+            "id": "t1",
+            "title": "Cornfield Chase",
+            "artist": "Hans Zimmer",
+            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+          },
+          {
+            "id": "t2",
+            "title": "Experience",
+            "artist": "Ludovico Einaudi",
+            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+          },
+          {
+            "id": "t3",
+            "title": "River Flows in You",
+            "artist": "Yiruma",
+            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+          },
+          {
+            "id": "t4",
+            "title": "Blizzard",
+            "artist": "Ryuichi Sakamoto",
+            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
+          },
+          {
+            "id": "t5",
+            "title": "Merry Christmas Mr. Lawrence",
+            "artist": "Ryuichi Sakamoto",
+            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "quotes": [],
+    "wechatQr": "",
+    "items": [
+      {
+        "id": "email",
+        "label": "邮箱",
+        "value": "daisymoo.pan@gmail.com",
+        "copyable": true
+      },
+      {
+        "id": "wechat",
+        "label": "微信",
+        "value": "AsterMo_",
+        "copyable": true
+      },
+      {
+        "id": "github",
+        "label": "GitHub",
+        "value": "https://github.com/daisymo",
+        "href": "https://github.com/daisymo",
+        "copyable": false
+      }
+    ]
+  }
+}

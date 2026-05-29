@@ -1,0 +1,12 @@
+name = "personal-website-chat"
+main = "workers/chat.ts"
+compatibility_date = "2024-11-01"
+
+[vars]
+CHAT_RATE_LIMIT_PER_MINUTE = "10"
+CHAT_RATE_LIMIT_PER_DAY = "100"
+# Comma-separated origins, e.g. https://username.github.io,https://yourdomain.com
+CHAT_ALLOWED_ORIGINS = ""
+
+# Set secret (never commit):
+#   npx wrangler secret put DEEPSEEK_API_KEY

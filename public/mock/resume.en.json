@@ -1,0 +1,428 @@
+{
+  "profile": {
+    "name": "Aster",
+    "title": "Frontend Engineer",
+    "summary": "Experienced in building high-concurrency, reusable frontend architecture from 0 to 1. Deep expertise in the Vue ecosystem with fast switching between Vue and React for team collaboration. Skilled at integrating AI into frontend engineering and product UX, with strong practice in delivery efficiency and intelligent experiences. Led complex systems across smart campus, AI sports, fintech, and connected vehicles, with solid experience in large-scale data visualization, real-time interaction, and LLM frontend integration — with a framework-agnostic approach to architecture design.",
+    "motto": "Trade craftsmanship for every experience people can trust.",
+    "location": "Hangzhou",
+    "avatar": null
+  },
+  "projects": [
+    {
+      "id": "p0",
+      "slug": "personal-portfolio",
+      "title": "Personal Portfolio Website",
+      "summary": "Bilingual online resume · AI chat & performance tuning",
+      "company": "Personal project",
+      "introduction": "A React-based portfolio and online resume site with Chinese/English switching, featuring project showcases, experience, skills, and hobby detail pages. Includes an AI chat assistant that answers visitor questions from resume context, with systematic first-paint and bundle-size optimization.",
+      "responsibilities": [
+        "Owned site information architecture and UI across home, project list/detail, and hobby subpages",
+        "Integrated AI chat module for resume-grounded Q&A and visitor interaction",
+        "Applied route lazy loading, deferred mounting, and build chunking to shrink first-load JavaScript"
+      ],
+      "outcomes": [
+        "Fully responsive on mobile; hobby modules support immersive photo, reading, hiking, and music experiences",
+        "Reduced main app chunk to ~21KB while keeping motion effects via LazyMotion"
+      ],
+      "skills": ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "React Router"],
+      "categories": ["personal", "ai"],
+      "image": "/projects/p0.svg"
+    },
+    {
+      "id": "p1",
+      "slug": "lezhixing-smart-campus",
+      "title": "Lezhixing Smart Campus",
+      "summary": "K12 AI smart campus platform · safety, dorms, home-school",
+      "company": "Hangzhou Lezhixing Education Technology Co., Ltd.",
+      "introduction": "AI-driven K12 smart campus management platform covering safety, dorm management, mental health, and home-school communication. Uses face recognition, behavior analysis, and AI alerts for proactive campus safety, processing over 1 million behavioral records daily.",
+      "responsibilities": [
+        "Built a reusable Ant Design business component library (trajectory maps, behavior cards, alert lists, dashboard widgets) to improve cross-module reuse",
+        "JSON Schema–driven dynamic forms for academic, dorm, and visitor booking workflows, reducing repetitive development"
+      ],
+      "outcomes": [
+        "Canvas rendering and virtual scrolling improved first paint by 30%+",
+        "AI-driven data slicing and intelligent preloading strategies"
+      ],
+      "skills": ["Vue3", "React", "TypeScript", "Ant Design", "ECharts"],
+      "categories": ["work", "ai"],
+      "image": "/projects/p1.svg"
+    },
+    {
+      "id": "p2",
+      "slug": "lingkang-yuedong",
+      "title": "Smart Campus Platform / Lingkang Yuedong",
+      "summary": "Fitness health management & smart sports ecosystem · multi-end mini programs",
+      "company": "Jiangsu Lingkang Electronics Development Co., Ltd. (Hangzhou Branch)",
+      "introduction": "National fitness health management and smart sports ecosystem platform integrating fitness testing, classes, events, and administration. Supports real-time collection and analysis of large-scale motion data with personalized exercise guidance.",
+      "responsibilities": [
+        "Designed unified login and permission system for seamless cross-platform access across multiple systems",
+        "Supported legacy device Bluetooth and multiple AI motion capture modes for stable, real-time data",
+        "Component library and modular architecture reduced duplicate code 30%+"
+      ],
+      "outcomes": [
+        "Real-time personalized exercise prescriptions — upgrading reports from visualization to conversation",
+        "Parameterized configuration enabled third-party mini programs to launch faster, cutting delivery cycle by 40%"
+      ],
+      "skills": ["Vue3", "Uni-app", "Pinia", "TypeScript", "AI Sports"],
+      "categories": ["work", "ai"],
+      "image": "/projects/p2.svg"
+    },
+    {
+      "id": "p3",
+      "slug": "fitness-master",
+      "title": "Fitness Master",
+      "summary": "AI vision sports education · teach, train, assess loop",
+      "company": "Zhejiang Yiti Technology Co., Ltd.",
+      "introduction": "AI sports education platform based on computer vision. Gamifies motion through intelligent behavior analysis, supporting rope skipping, running, and exam-oriented training in a teach–train–assess closed loop.",
+      "responsibilities": [
+        "Delivered high-reuse component library and development standards, reducing redundant code 30%",
+        "Built data visualization dashboards supporting real-time decisions for sports events and fitness testing"
+      ],
+      "outcomes": [
+        "Resource cleanup and caching strategies improved overall platform performance 20%+",
+        "Optimized Canvas rendering pipeline for higher-quality AI motion recognition visuals"
+      ],
+      "skills": ["Vue3", "Canvas", "AMap", "Data Dashboard"],
+      "categories": ["work", "ai"],
+      "image": "/projects/p3.svg"
+    },
+    {
+      "id": "p4",
+      "slug": "mobile-insurance-management",
+      "title": "Palm Silver Insurance Admin",
+      "summary": "Bancassurance team platform · WeCom integration & product rules",
+      "company": "Hangzhou Weiyi Information Technology Co., Ltd.",
+      "introduction": "Management platform for bancassurance teams with permissions, online support, audit logs, deep WeCom integration, and complex insurance product combination calculations.",
+      "responsibilities": [
+        "Permission system and WeCom scan login for improved security and usability",
+        "Search, filters, and audit trails for efficient, traceable data queries",
+        "Integrated online customer service module to improve user satisfaction"
+      ],
+      "outcomes": [
+        "Data visualization to support business analysis",
+        "Performance optimization and bundle strategy reduced package size ~35%"
+      ],
+      "skills": ["Vue2", "Webpack", "Ant Design", "WeCom"],
+      "categories": ["work"],
+      "image": "/projects/p4.svg"
+    },
+    {
+      "id": "p5",
+      "slug": "pocket-finance",
+      "title": "Palm Finance",
+      "summary": "Cross-end fintech platform · Taro mini program + H5",
+      "company": "Hangzhou Weiyi Information Technology Co., Ltd.",
+      "introduction": "Cross-end service platform for loan brokers and clients, supporting mini programs (broker side) and H5 (client side) with fast iteration, high stability, and precise behavioral analytics.",
+      "responsibilities": [
+        "Introduced Taro framework for rapid iteration and long-term maintainability",
+        "Built compatibility component library to resolve Vant styling and interaction issues on H5"
+      ],
+      "outcomes": [
+        "Alibaba Cloud captcha and event tracking to prevent abusive API calls",
+        "WeChat APIs for precise user behavioral analytics",
+        "Subpackages and lazy loading: core page load speed up 40%, bundle size down 35%"
+      ],
+      "skills": ["Taro", "Vue2", "Vant", "TypeScript"],
+      "categories": ["work"],
+      "image": "/projects/p5.svg"
+    },
+    {
+      "id": "p6",
+      "slug": "taxi-fleet-platform",
+      "title": "Taxi Fleet Comprehensive Platform",
+      "summary": "Traffic safety monitoring · live dashboard & route replay",
+      "company": "Hangzhou Cherries Intelligence Technology Co., Ltd.",
+      "introduction": "Traffic safety monitoring platform built on in-house vehicle hardware, providing real-time vehicle tracking, route replay, geofencing, and heatmap analysis.",
+      "responsibilities": [
+        "Independently built monitoring dashboard, route replay, driver info, and incentive modules",
+        "Deep integration of AMap and Tencent live video stream SDKs"
+      ],
+      "outcomes": [
+        "Optimized complex table filtering and search logic, improving query efficiency 50%",
+        "Led UI system refactor for improved interaction consistency"
+      ],
+      "skills": ["Vue2", "Element UI", "ECharts", "AMap"],
+      "categories": ["work"],
+      "image": "/projects/p6.svg"
+    },
+    {
+      "id": "p7",
+      "slug": "16hour-news",
+      "title": "16HOUR News Platform",
+      "summary": "Lifestyle news · WebView app & campaign H5",
+      "company": "Chengdu Tuoyuan Culture Communication Co., Ltd.",
+      "introduction": "Lifestyle news platform covering international, domestic, and local topics with high-frequency campaign operations and multi-end delivery.",
+      "responsibilities": [
+        "Owned daily iterations and large-scale campaign H5, solving cross-device compatibility",
+        "Enhanced CMS article editing features to improve content production efficiency"
+      ],
+      "outcomes": [
+        "Improved campaign landing page load and interaction experience"
+      ],
+      "skills": ["jQuery", "H5", "WebView", "WeChat SDK"],
+      "categories": ["work"],
+      "image": "/projects/p7.svg"
+    }
+  ],
+  "experience": [
+    {
+      "id": "e1",
+      "company": "Jiangsu Lingkang Electronics Development Co., Ltd. (Hangzhou Branch)",
+      "role": "Frontend Team Lead",
+      "period": "Dec 2023 — Aug 2025",
+      "highlights": [
+        "Led frontend architecture and core development across admin, Pad, mini programs, and third-party mini program delivery",
+        "Owned performance optimization strategy; introduced AI-assisted code review and component generation to improve team velocity",
+        "Led frontend stack selection and engineering setup; built and maintained component library and modular architecture",
+        "Hiring and mentoring frontend engineers"
+      ]
+    },
+    {
+      "id": "e2",
+      "company": "Zhejiang Yiti Technology Co., Ltd.",
+      "role": "Frontend Team Lead",
+      "period": "May 2022 — Oct 2023",
+      "highlights": [
+        "Owned frontend architecture and stack selection for campus sports informatization systems (Web/App)",
+        "Built shared component and utility libraries, reducing duplicate work ~30%",
+        "Established frontend development standards and led code reviews",
+        "Hiring and mentoring frontend engineers"
+      ]
+    },
+    {
+      "id": "e3",
+      "company": "Hangzhou Weiyi Information Technology Co., Ltd.",
+      "role": "Frontend Engineer",
+      "period": "Oct 2019 — Apr 2022",
+      "highlights": [
+        "Independently owned frontend architecture and development of Palm Silver Insurance and Palm Finance from 0 to 1",
+        "Developed and maintained insurance admin platform, workplace mobile app, and related systems",
+        "Explored LLM API integration in insurance/fintech scenarios and cross-end compatibility solutions",
+        "Hosted tech talks on Taro and micro-frontends to foster team learning culture"
+      ]
+    },
+    {
+      "id": "e4",
+      "company": "Chengdu Tuoyuan Culture Communication Co., Ltd.",
+      "role": "Frontend Lead",
+      "period": "Jul 2016 — Sep 2019",
+      "highlights": [
+        "Delivered WebView app and large-scale campaign H5 for millions of users",
+        "Owned core platform features and project delivery",
+        "Solved cross-device compatibility; UI refactor and interaction improvements; built component library",
+        "Participated in requirement planning and frontend architecture design for fast campaign releases"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Languages & Fundamentals",
+      "items": [
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "Browser rendering",
+        "Networking protocols"
+      ]
+    },
+    {
+      "category": "Frontend Frameworks",
+      "items": [
+        "Vue 2 / Vue 3",
+        "Vue Router",
+        "Composition API",
+        "Pinia / Vuex",
+        "React"
+      ]
+    },
+    {
+      "category": "Cross-end & Tooling",
+      "items": [
+        "Taro",
+        "Uni-app",
+        "WeChat Mini Programs",
+        "Webpack",
+        "Vite",
+        "Qiankun micro-frontends"
+      ]
+    },
+    {
+      "category": "Performance & UI",
+      "items": [
+        "First paint / code splitting",
+        "Virtual lists",
+        "Frontend monitoring & tracking",
+        "Ant Design",
+        "Element UI",
+        "ECharts",
+        "Canvas"
+      ]
+    },
+    {
+      "category": "AI & More",
+      "items": [
+        "Cursor / Copilot / ChatGPT",
+        "AIGC engineering",
+        "Python data scraping",
+        "OAuth2 / CAS SSO"
+      ]
+    }
+  ],
+  "about": {
+    "quote": {
+      "id": "q1",
+      "text": "Programs must be written for people to read, and only incidentally for machines to execute.",
+      "author": "Harold Abelson"
+    },
+    "credentials": [
+      { "id": "c1", "name": "Senior AI Trainer", "icon": "🎓" },
+      { "id": "c2", "name": "Data Scraping", "icon": "🕸️" },
+      { "id": "c3", "name": "AI Engineering", "icon": "⚡" }
+    ],
+    "hobbies": [
+      {
+        "id": "h1",
+        "slug": "photography",
+        "name": "Photography",
+        "icon": "📷",
+        "detail": "Capturing light and everyday moments through the lens — street photography and natural-light detail composition.",
+        "photos": [
+          { "id": "ph1", "src": "/hobbies/photos/152426.jpg" },
+          { "id": "ph2", "src": "/hobbies/photos/152428.jpg" },
+          { "id": "ph3", "src": "/hobbies/photos/152431.jpg" },
+          { "id": "ph4", "src": "/hobbies/photos/152435.jpg" },
+          { "id": "ph5", "src": "/hobbies/photos/152439.jpg" },
+          { "id": "ph6", "src": "/hobbies/photos/152444.jpg" },
+          { "id": "ph7", "src": "/hobbies/photos/152447.jpg" },
+          { "id": "ph8", "src": "/hobbies/photos/152457.jpg" },
+          { "id": "ph9", "src": "/hobbies/photos/152501.jpg" },
+          { "id": "ph10", "src": "/hobbies/photos/152505.jpg" },
+          { "id": "ph11", "src": "/hobbies/photos/152510.jpg" },
+          { "id": "ph12", "src": "/hobbies/photos/152519.jpg" },
+          { "id": "ph13", "src": "/hobbies/photos/152523.jpg" },
+          { "id": "ph14", "src": "/hobbies/photos/152527.jpg" },
+          { "id": "ph15", "src": "/hobbies/photos/152531.jpg" },
+          { "id": "ph16", "src": "/hobbies/photos/152534.jpg" },
+          { "id": "ph17", "src": "/hobbies/photos/152538.jpg" },
+          { "id": "ph18", "src": "/hobbies/photos/152542.jpg" },
+          { "id": "ph19", "src": "/hobbies/photos/152545.jpg" },
+          { "id": "ph20", "src": "/hobbies/photos/152552.jpeg" }
+        ]
+      },
+      {
+        "id": "h2",
+        "slug": "reading",
+        "name": "Reading",
+        "icon": "📚",
+        "detail": "Mostly tech, design, and essays — a steady habit on commutes and before sleep.",
+        "reading": {
+          "read": [
+            { "id": "r1", "title": "Refactoring", "author": "Martin Fowler" },
+            { "id": "r2", "title": "The Design of Everyday Things", "author": "Don Norman" },
+            { "id": "r3", "title": "The Little Prince", "author": "Saint-Exupéry" },
+            { "id": "r4", "title": "The Mythical Man-Month", "author": "Fred Brooks" }
+          ],
+          "reading": [
+            { "id": "r5", "title": "Domain-Driven Design", "author": "Eric Evans" },
+            { "id": "r6", "title": "The Non-Designer's Design Book", "author": "Robin Williams" }
+          ],
+          "wish": [
+            { "id": "r7", "title": "Gödel, Escher, Bach", "author": "Hofstadter" },
+            { "id": "r8", "title": "Invisible Cities", "author": "Calvino" }
+          ]
+        }
+      },
+      {
+        "id": "h3",
+        "slug": "hiking",
+        "name": "Hiking",
+        "icon": "🥾",
+        "detail": "Short weekend trails — enjoying the rhythm of walking and the view at the summit.",
+        "peaks": [
+          { "id": "m1", "name": "Badaling", "region": "Beijing", "elevation": "888m" },
+          { "id": "m2", "name": "Daming Mountain", "region": "Zhejiang", "elevation": "1487m" },
+          { "id": "m3", "name": "Jingshan", "region": "Zhejiang", "elevation": "769m" },
+          { "id": "m4", "name": "Huangshan", "region": "Anhui", "elevation": "1864m" },
+          { "id": "m5", "name": "Mount Qingcheng", "region": "Sichuan", "elevation": "1260m" },
+          { "id": "m6", "name": "Zhongshan", "region": "Jiangsu", "elevation": "448m" },
+          { "id": "m7", "name": "Mount Li", "region": "Shaanxi", "elevation": "1302m" },
+          { "id": "m8", "name": "Tiger Hill", "region": "Jiangsu", "elevation": "34m" },
+          { "id": "m9", "name": "Sanqing Mountain", "region": "Jiangxi", "elevation": "1817m" },
+          { "id": "m10", "name": "Wugong Mountain", "region": "Jiangxi", "elevation": "1918m" },
+          { "id": "m11", "name": "Hemu Beautiful Peak", "region": "Xinjiang", "elevation": "2848m" },
+          { "id": "m12", "name": "Kanas Fish Viewing Platform", "region": "Xinjiang", "elevation": "1060m" }
+        ]
+      },
+      {
+        "id": "h4",
+        "slug": "archery",
+        "name": "Archery",
+        "icon": "🏹",
+        "detail": "Focus on breath and form — archery as a way to reset and concentrate."
+      },
+      {
+        "id": "h5",
+        "slug": "music",
+        "name": "Music",
+        "icon": "🎵",
+        "detail": "Instrumental and ambient playlists while working; occasional guitar to unwind.",
+        "tracks": [
+          {
+            "id": "t1",
+            "title": "Cornfield Chase",
+            "artist": "Hans Zimmer",
+            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+          },
+          {
+            "id": "t2",
+            "title": "Experience",
+            "artist": "Ludovico Einaudi",
+            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+          },
+          {
+            "id": "t3",
+            "title": "River Flows in You",
+            "artist": "Yiruma",
+            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+          },
+          {
+            "id": "t4",
+            "title": "Blizzard",
+            "artist": "Ryuichi Sakamoto",
+            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
+          },
+          {
+            "id": "t5",
+            "title": "Merry Christmas Mr. Lawrence",
+            "artist": "Ryuichi Sakamoto",
+            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "quotes": [],
+    "wechatQr": "",
+    "items": [
+      {
+        "id": "email",
+        "label": "Email",
+        "value": "daisymoo.pan@gmail.com",
+        "copyable": true
+      },
+      {
+        "id": "wechat",
+        "label": "WeChat",
+        "value": "AsterMo_",
+        "copyable": true
+      },
+      {
+        "id": "github",
+        "label": "GitHub",
+        "value": "https://github.com/daisymo",
+        "href": "https://github.com/daisymo",
+        "copyable": false
+      }
+    ]
+  }
+}
