@@ -32,7 +32,7 @@ function NavLinks({
         {navItems.map((item) => (
           <li key={item.id}>
             <Link
-              to={navHref(item.id)}
+              to={navHref()}
               state={navScrollState(item.id)}
               className={linkClassName(item.id)}
               onClick={(event) => {

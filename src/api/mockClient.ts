@@ -1,7 +1,6 @@
-/** Mock API delay (ms) to simulate network latency. */
-export const MOCK_API_DELAY_MS = 400
+const MOCK_API_DELAY_MS = 400
 
-export function mockDelay(ms = MOCK_API_DELAY_MS): Promise<void> {
+function mockDelay(ms = MOCK_API_DELAY_MS): Promise<void> {
   return new Promise((resolve) => window.setTimeout(resolve, ms))
 }
 

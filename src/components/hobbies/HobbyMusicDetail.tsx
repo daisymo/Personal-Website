@@ -10,7 +10,7 @@ export function HobbyMusicDetail({ hobby }: HobbyMusicDetailProps) {
   const tracks = hobby.tracks ?? []
 
   return (
-    <HobbyDetailShell hobby={hobby} variant="music" hideYear hideEyebrow hideLede>
+    <HobbyDetailShell hobby={hobby} variant="music" hideYear hideEyebrow>
       <HobbyMusicPlayer tracks={tracks} />
     </HobbyDetailShell>
   )

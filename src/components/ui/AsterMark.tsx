@@ -3,8 +3,6 @@ import { cn } from '../../lib/cn'
 
 interface AsterMarkProps {
   className?: string
-  /** Include medallion backdrop — used in favicon; nav uses CSS container instead. */
-  withMedallion?: boolean
 }
 
 const STAR_TOP = 'M16 16 13.65 12.6 16 4.2 18.35 12.6Z'
@@ -15,7 +13,7 @@ const STAR_OUTLINE =
   'M16 4.2 18.35 12.6 26.8 13.35 19.35 17.6 16 26.2 12.65 17.6 5.2 13.35 13.65 12.6Z'
 
 /** Faceted jewel star — premium mark for nav & favicon. */
-export function AsterMark({ className, withMedallion = false }: AsterMarkProps) {
+export function AsterMark({ className }: AsterMarkProps) {
   const uid = useId().replace(/:/g, '')
 
   return (
@@ -27,22 +25,11 @@ export function AsterMark({ className, withMedallion = false }: AsterMarkProps) 
       aria-hidden
     >
       <defs>
-        <radialGradient id={`${uid}-medallion`} cx="32%" cy="22%" r="78%">
-          <stop stopColor="#ffffff" />
-          <stop offset="0.45" stopColor="#eef3fc" />
-          <stop offset="1" stopColor="#d4e2f6" />
-        </radialGradient>
         <radialGradient id={`${uid}-aura`} cx="50%" cy="42%" r="52%">
           <stop stopColor="#8eb4ea" stopOpacity="0.72" />
           <stop offset="0.55" stopColor="#6b93d4" stopOpacity="0.28" />
           <stop offset="1" stopColor="#6b93d4" stopOpacity="0" />
         </radialGradient>
-        <linearGradient id={`${uid}-ring`} x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#b8cff0" />
-          <stop offset="0.35" stopColor="#6b93d4" />
-          <stop offset="0.65" stopColor="#ffffff" stopOpacity="0.85" />
-          <stop offset="1" stopColor="#8fafe8" />
-        </linearGradient>
         <linearGradient id={`${uid}-f1`} x1="16" y1="4" x2="16" y2="16" gradientUnits="userSpaceOnUse">
           <stop stopColor="#dce9fb" />
           <stop offset="0.45" stopColor="#8fafe8" />
@@ -77,13 +64,6 @@ export function AsterMark({ className, withMedallion = false }: AsterMarkProps) 
           </feMerge>
         </filter>
       </defs>
-
-      {withMedallion ? (
-        <>
-          <circle cx="16" cy="16" r="15.5" fill={`url(#${uid}-medallion)`} />
-          <circle cx="16" cy="16" r="15.5" stroke={`url(#${uid}-ring)`} strokeWidth="0.65" />
-        </>
-      ) : null}
 
       <circle className="aster-mark__aura" cx="16" cy="16.5" r="11.5" fill={`url(#${uid}-aura)`} filter={`url(#${uid}-glow)`} />
       <path className="aster-mark__halo" d={STAR_OUTLINE} fill="#6b93d4" fillOpacity="0.16" transform="translate(16 16) scale(1.1) translate(-16 -16)" />

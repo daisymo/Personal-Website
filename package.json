@@ -1,5 +1,5 @@
 {
-  "name": "resume-site",
+  "name": "personal-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,15 +11,19 @@
     "deploy:chat": "wrangler deploy"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
+    "@types/three": "^0.184.1",
     "framer-motion": "^12.39.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-    "react-router-dom": "^7.15.1"
+    "react-router-dom": "^7.15.1",
+    "three": "^0.184.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@tailwindcss/vite": "^4.3.0",
-    "@types/node": "^24.12.3",
+    "@types/node": "^25.9.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",

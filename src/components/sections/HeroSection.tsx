@@ -7,9 +7,9 @@ import { fadeUp, staggerContainer } from '../../motion/presets'
 const HeroAmbient = lazy(() =>
   import('../motion/HeroAmbient').then((module) => ({ default: module.HeroAmbient })),
 )
-const HeroSatelliteVisual = lazy(() =>
-  import('../motion/HeroSatelliteVisual').then((module) => ({
-    default: module.HeroSatelliteVisual,
+const HeroOrbitScene = lazy(() =>
+  import('../motion/HeroOrbitScene').then((module) => ({
+    default: module.HeroOrbitScene,
   })),
 )
 
@@ -84,11 +84,11 @@ export function HeroSection() {
             transition={{ duration: 1, ease }}
           >
             {reduced ? (
-              <div className="hero__fallback hero__fallback--celestial" aria-hidden />
+              <div className="hero__fallback hero__fallback--orbit" aria-hidden />
             ) : (
-              <Suspense fallback={<div className="hero__fallback hero__fallback--celestial" aria-hidden />}>
+              <Suspense fallback={<div className="hero__fallback hero__fallback--orbit" aria-hidden />}>
                 <HeroAmbient mouseX={mouseX} mouseY={mouseY} />
-                <HeroSatelliteVisual mouseX={mouseX} mouseY={mouseY} />
+                <HeroOrbitScene mouseX={mouseX} mouseY={mouseY} />
               </Suspense>
             )}
           </motion.div>

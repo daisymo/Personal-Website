@@ -24,13 +24,21 @@ export function ExperienceSection() {
           <motion.article key={job.id} className="exp-item" variants={fadeUp}>
             <time className="exp-period">{job.period}</time>
             <div className="exp-card">
+              <div className="exp-card__accent" aria-hidden />
               <header className="exp-card__head">
-                <h3 className="exp-card__role">{job.role}</h3>
-                <p className="exp-card__company">{job.company}</p>
+                <div className="exp-card__titles">
+                  <h3 className="exp-card__role">{job.role}</h3>
+                  <p className="exp-card__company">{job.company}</p>
+                </div>
               </header>
               <ul className="exp-card__highlights">
-                {job.highlights.map((line) => (
-                  <li key={line}>{line}</li>
+                {job.highlights.map((line, index) => (
+                  <li key={line} className="exp-highlight">
+                    <span className="exp-highlight__index" aria-hidden>
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <p className="exp-highlight__text">{line}</p>
+                  </li>
                 ))}
               </ul>
             </div>

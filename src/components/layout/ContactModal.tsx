@@ -16,15 +16,12 @@ export function ContactModal({ open, onClose }: ContactModalProps) {
 
   if (!resume) return null
 
-  const qrSrc = resume.contact.wechatQr
-
   return (
     <OverlayModal
       open={open}
       onClose={onClose}
       titleId="contact-modal-title"
       panelClassName="contact-modal__panel"
-      panelStyle={{ ['--modal-width' as string]: '40rem' }}
       ariaLabel={t.contact.close}
     >
       <header className="contact-modal__head">
@@ -41,18 +38,6 @@ export function ContactModal({ open, onClose }: ContactModalProps) {
       </header>
 
       <div className="contact-modal__body">
-        <div className="contact-modal__body-grid">
-        <aside className="contact-modal__qr" aria-label={t.contact.wechatQrLabel}>
-          <span className="contact-modal__qr-label">{t.contact.wechatQrLabel}</span>
-          <div className="contact-modal__qr-frame">
-            {qrSrc ? (
-              <img src={qrSrc} alt={t.contact.wechatQrLabel} className="contact-modal__qr-image" />
-            ) : (
-              <span className="contact-modal__qr-placeholder">{t.contact.wechatQrPlaceholder}</span>
-            )}
-          </div>
-        </aside>
-
         <ul className="contact-modal__list">
           {resume.contact.items.map((item) => (
             <li key={item.id} className="contact-modal__item">
@@ -90,7 +75,6 @@ export function ContactModal({ open, onClose }: ContactModalProps) {
             </li>
           ))}
         </ul>
-        </div>
       </div>
     </OverlayModal>
   )

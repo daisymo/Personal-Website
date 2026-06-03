@@ -12,7 +12,7 @@ export function buildNavItems(t: UiStrings): NavItem[] {
   ]
 }
 
-export function navHref(_id: SectionId) {
+export function navHref(): string {
   return '/'
 }
 

@@ -1,6 +1,4 @@
-export const PROJECT_CATEGORIES = ['work', 'personal', 'ai'] as const
-
-export type ProjectCategory = (typeof PROJECT_CATEGORIES)[number]
+export type ProjectCategory = 'work' | 'personal' | 'ai'
 
 export type ProjectCategoryFilter = 'all' | ProjectCategory
 
