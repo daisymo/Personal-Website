@@ -1,4 +1,3 @@
-import type { Locale } from '../data'
 import type { ChatMessage } from '../types/chat'
 
 const STORAGE_KEY = 'portfolio-chat-cache-v2'
@@ -23,7 +22,7 @@ function hashString(input: string): string {
 }
 
 export function buildChatCacheKey(
-  locale: Locale,
+  locale: 'zh',
   profileHint: string,
   history: ChatMessage[],
 ): string {

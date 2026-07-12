@@ -1,6 +1,4 @@
-# personal-portfolio
-
-个人中英文简历作品集网站。
+# 个人作品集
 
 **项目地址**: https://daisymo.github.io/Personal-Website/
 

@@ -107,7 +107,6 @@ export const uiStrings: UiStrings = {
     loading: '加载中…',
     error: '简历数据加载失败',
     retry: '重试',
-    langToggle: 'EN',
     back: '返回',
   },
   chat: {

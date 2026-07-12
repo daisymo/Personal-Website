@@ -105,7 +105,6 @@ export interface UiStrings {
     loading: string
     error: string
     retry: string
-    langToggle: string
     back: string
   }
   chat: {

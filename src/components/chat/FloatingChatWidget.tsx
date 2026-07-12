@@ -78,7 +78,7 @@ export function FloatingChatWidget() {
 
     try {
       const profileHint = buildProfileHint(resume?.profile)
-      const { content } = await sendChatMessage(nextHistory, 'zh', profileHint)
+      const { content } = await sendChatMessage(nextHistory, profileHint)
       setMessages((prev) => [
         ...prev,
         { id: createId(), role: 'assistant', content },

@@ -1,22 +1,15 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { fetchResumeOptimized } from '../api/resumeApi'
 import { LanguageContext } from '../context/language-context'
-import type { Locale } from '../data'
 import type { UiStrings } from '../i18n/ui'
 import type { Resume } from '../types/resume'
-import { getDocumentLang, persistLocale, readStoredLocale } from '../lib/locale'
+import { getDocumentLang } from '../lib/locale'
 
 interface LanguageProviderProps {
   children: ReactNode
 }
 
-const uiLoaders: Record<Locale, () => Promise<{ uiStrings: UiStrings }>> = {
-  zh: () => import('../i18n/zh'),
-  en: () => import('../i18n/en'),
-}
-
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [locale, setLocaleState] = useState<Locale>(readStoredLocale)
   const [ui, setUi] = useState<UiStrings | null>(null)
   const [resume, setResume] = useState<Resume | null>(null)
   const [isResumeLoading, setIsResumeLoading] = useState(true)
@@ -25,27 +18,23 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   const resumeRef = useRef<Resume | null>(null)
 
   useEffect(() => {
-    let active = true
-    void uiLoaders[locale]().then((module) => {
-      if (active) setUi(module.uiStrings)
+    void import('../i18n/zh').then((module) => {
+      setUi(module.uiStrings)
     })
-    return () => {
-      active = false
-    }
-  }, [locale])
+  }, [])
 
   const handleResumeUpdate = useCallback((data: Resume) => {
     resumeRef.current = data
     setResume(data)
   }, [])
 
-  const loadResume = useCallback(async (loc: Locale, signal: AbortSignal) => {
+  const loadResume = useCallback(async (signal: AbortSignal) => {
     if (resumeRef.current === null) {
       setIsResumeLoading(true)
     }
     setResumeError(null)
     try {
-      const data = await fetchResumeOptimized(loc, handleResumeUpdate)
+      const data = await fetchResumeOptimized(handleResumeUpdate)
       if (!signal.aborted) {
         resumeRef.current = data
         setResume(data)
@@ -66,18 +55,9 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   useEffect(() => {
     const controller = new AbortController()
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    void loadResume(locale, controller.signal)
+    void loadResume(controller.signal)
     return () => controller.abort()
-  }, [locale, reloadKey, loadResume])
-
-  const setLocale = useCallback((next: Locale) => {
-    setLocaleState(next)
-    persistLocale(next)
-  }, [])
-
-  const toggleLocale = useCallback(() => {
-    setLocale(locale === 'zh' ? 'en' : 'zh')
-  }, [locale, setLocale])
+  }, [reloadKey, loadResume])
 
   const retry = useCallback(() => {
     setReloadKey((k) => k + 1)
@@ -87,9 +67,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     () =>
       ui
         ? {
-            locale,
-            setLocale,
-            toggleLocale,
+            locale: 'zh' as const,
             t: ui,
             resume,
             isResumeLoading,
@@ -97,12 +75,12 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
             retry,
           }
         : null,
-    [locale, setLocale, toggleLocale, ui, resume, isResumeLoading, resumeError, retry],
+    [ui, resume, isResumeLoading, resumeError, retry],
   )
 
   useEffect(() => {
-    document.documentElement.lang = getDocumentLang(locale)
-  }, [locale])
+    document.documentElement.lang = getDocumentLang()
+  }, [])
 
   if (!value) return null
 

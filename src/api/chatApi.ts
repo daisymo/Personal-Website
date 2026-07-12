@@ -1,4 +1,3 @@
-import type { Locale } from '../data'
 import type { ChatMessage } from '../types/chat'
 import {
   buildChatCacheKey,
@@ -24,10 +23,9 @@ function resolveChatUrl(): string {
 
 export async function sendChatMessage(
   history: ChatMessage[],
-  locale: Locale,
   profileHint: string,
 ): Promise<ChatApiResult> {
-  const cacheKey = buildChatCacheKey(locale, profileHint, history)
+  const cacheKey = buildChatCacheKey('zh', profileHint, history)
   const cached = getCachedChatReply(cacheKey)
   if (cached) {
     return { content: cached, fromClientCache: true }
@@ -41,7 +39,7 @@ export async function sendChatMessage(
   const response = await fetch(resolveChatUrl(), {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ messages, locale, profileHint }),
+    body: JSON.stringify({ messages, locale: 'zh', profileHint }),
   })
 
   const data = (await response.json()) as {
