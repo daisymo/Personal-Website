@@ -26,7 +26,7 @@ function buildProfileHint(
 }
 
 export function FloatingChatWidget() {
-  const { resume, locale, t } = useLanguage()
+  const { resume, t } = useLanguage()
   const titleId = useId()
   const [open, setOpen] = useState(false)
   const [input, setInput] = useState('')
@@ -78,7 +78,7 @@ export function FloatingChatWidget() {
 
     try {
       const profileHint = buildProfileHint(resume?.profile)
-      const { content } = await sendChatMessage(nextHistory, locale, profileHint)
+      const { content } = await sendChatMessage(nextHistory, 'zh', profileHint)
       setMessages((prev) => [
         ...prev,
         { id: createId(), role: 'assistant', content },
@@ -88,7 +88,7 @@ export function FloatingChatWidget() {
     } finally {
       setLoading(false)
     }
-  }, [input, loading, messages, locale, resume, t.chat.error, t.chat.rateLimitClient])
+  }, [input, loading, messages, resume, t.chat.error, t.chat.rateLimitClient])
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault()

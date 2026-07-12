@@ -2,7 +2,6 @@ interface ChatFabIconProps {
   open: boolean
 }
 
-/** Chibi star mascot for the floating AI assistant button. */
 export function ChatFabIcon({ open }: ChatFabIconProps) {
   if (open) {
     return (

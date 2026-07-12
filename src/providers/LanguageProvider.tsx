@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
-import { fetchResume } from '../api/resumeApi'
+import { fetchResumeOptimized } from '../api/resumeApi'
 import { LanguageContext } from '../context/language-context'
 import type { Locale } from '../data'
 import type { UiStrings } from '../i18n/ui'
@@ -34,13 +34,18 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     }
   }, [locale])
 
+  const handleResumeUpdate = useCallback((data: Resume) => {
+    resumeRef.current = data
+    setResume(data)
+  }, [])
+
   const loadResume = useCallback(async (loc: Locale, signal: AbortSignal) => {
     if (resumeRef.current === null) {
       setIsResumeLoading(true)
     }
     setResumeError(null)
     try {
-      const data = await fetchResume(loc)
+      const data = await fetchResumeOptimized(loc, handleResumeUpdate)
       if (!signal.aborted) {
         resumeRef.current = data
         setResume(data)
@@ -56,7 +61,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
         setIsResumeLoading(false)
       }
     }
-  }, [])
+  }, [handleResumeUpdate])
 
   useEffect(() => {
     const controller = new AbortController()

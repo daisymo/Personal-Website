@@ -70,7 +70,7 @@ export function ProjectDetailPage() {
                   </DetailModule>
                 ) : null}
 
-                {project.company ? (
+                {project.company && !project.categories?.includes('personal') ? (
                   <DetailModule label={t.projects.companyLabel} variant="meta">
                     <p className="project-detail__company">{project.company}</p>
                   </DetailModule>

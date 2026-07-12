@@ -1,4 +1,4 @@
-import { lazy, Suspense, type MouseEvent } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState, type MouseEvent } from 'react'
 import { motion, useMotionValue, useReducedMotion } from '../../motion/framer'
 import { useLanguage } from '../../hooks/useLanguage'
 import { HeroContactButton } from '../hero/HeroContactButton'
@@ -7,9 +7,9 @@ import { fadeUp, staggerContainer } from '../../motion/presets'
 const HeroAmbient = lazy(() =>
   import('../motion/HeroAmbient').then((module) => ({ default: module.HeroAmbient })),
 )
-const HeroSatelliteVisual = lazy(() =>
-  import('../motion/HeroSatelliteVisual').then((module) => ({
-    default: module.HeroSatelliteVisual,
+const HeroOrbitScene = lazy(() =>
+  import('../motion/HeroOrbitScene').then((module) => ({
+    default: module.HeroOrbitScene,
   })),
 )
 
@@ -20,6 +20,15 @@ export function HeroSection() {
   const reduced = useReducedMotion()
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
+  const [show3D, setShow3D] = useState(false)
+  const canvasRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setShow3D(true)
+    }, 800)
+    return () => window.clearTimeout(timer)
+  }, [])
 
   if (!resume) return null
 
@@ -78,18 +87,21 @@ export function HeroSection() {
           </motion.div>
 
           <motion.div
+            ref={canvasRef}
             className="hero__canvas"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease }}
           >
             {reduced ? (
-              <div className="hero__fallback hero__fallback--celestial" aria-hidden />
-            ) : (
-              <Suspense fallback={<div className="hero__fallback hero__fallback--celestial" aria-hidden />}>
+              <div className="hero__fallback hero__fallback--orbit" aria-hidden />
+            ) : show3D ? (
+              <Suspense fallback={<div className="hero__fallback hero__fallback--orbit" aria-hidden />}>
                 <HeroAmbient mouseX={mouseX} mouseY={mouseY} />
-                <HeroSatelliteVisual mouseX={mouseX} mouseY={mouseY} />
+                <HeroOrbitScene mouseX={mouseX} mouseY={mouseY} />
               </Suspense>
+            ) : (
+              <div className="hero__fallback hero__fallback--orbit" aria-hidden />
             )}
           </motion.div>
         </div>

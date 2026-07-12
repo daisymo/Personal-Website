@@ -6,7 +6,6 @@ import { staggerContainer } from '../../motion/presets'
 interface ProjectGridProps {
   projects: Project[]
   detailLabel: string
-  /** When set, re-animates the grid on change (e.g. category filter). */
   listKey?: string
 }
 

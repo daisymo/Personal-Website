@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react'
 import type { Project } from '../../types/resume'
 import { getProjectCoverHue, getProjectCoverInitial, getProjectCoverSrc } from '../../lib/projectCover'
+import { LazyImage } from '../ui/LazyImage'
 
 interface ProjectCoverProps {
   project: Project
@@ -15,12 +16,10 @@ export function ProjectCover({ project, index, className = '' }: ProjectCoverPro
 
   if (src) {
     return (
-      <img
+      <LazyImage
         src={src}
         alt=""
         className={`project-cover project-cover--photo ${className}`.trim()}
-        loading="lazy"
-        decoding="async"
       />
     )
   }

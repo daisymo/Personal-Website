@@ -4,18 +4,92 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="description" content="Personal resume portfolio" />
+    <meta name="description" content="Aster - 个人作品集" />
+    <meta name="keywords" content="前端工程师,React,Vue,TypeScript,前端开发,个人作品集,简历" />
     <meta name="theme-color" content="#ffffff" />
+    <meta name="author" content="Aster" />
+    <meta name="robots" content="index, follow" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Manrope:wght@400;600;700&family=Noto+Serif+SC:wght@500&family=Syne:wght@600;700;800&family=Noto+Sans+SC:wght@400;600;700&display=swap" as="style" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Manrope:wght@400;600;700&family=Noto+Serif+SC:wght@500&family=Syne:wght@600;700;800&family=Noto+Sans+SC:wght@400;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-    <title>Aster</title>
+    <link rel="canonical" href="https://daisymo.github.io/Personal-Website/" />
+    <meta property="og:title" content="Aster - 个人作品集" />
+    <meta property="og:description" content="具备从 0 到 1 构建高并发、高复用前端架构的经验，深耕 Vue/React 技术栈" />
+    <meta property="og:url" content="https://daisymo.github.io/Personal-Website/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aster Portfolio" />
+    <meta property="og:image" content="https://daisymo.github.io/Personal-Website/projects/p0.svg" />
+    <meta property="og:image:alt" content="Aster Portfolio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aster - 个人作品集" />
+    <meta name="twitter:description" content="具备从 0 到 1 构建高并发、高复用前端架构的经验" />
+    <meta name="twitter:image" content="https://daisymo.github.io/Personal-Website/projects/p0.svg" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aster",
+        "jobTitle": "前端工程师",
+        "description": "具备从 0 到 1 构建高并发、高复用前端架构的经验",
+        "url": "https://daisymo.github.io/Personal-Website/",
+        "sameAs": ["https://github.com/daisymo"]
+      }
+    </script>
+    <title>Aster - 个人作品集</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <style>
+      #page-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: transparent;
+        z-index: 9999;
+        pointer-events: none;
+      }
+      #page-loader::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background: linear-gradient(90deg, #6366f1, #8b5cf6, #6366f1);
+        background-size: 200% 100%;
+        animation: loading-progress 1.5s ease-in-out infinite, loading-fill 2s ease-out forwards;
+      }
+      @keyframes loading-progress {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+      }
+      @keyframes loading-fill {
+        0% { width: 0%; }
+        80% { width: 85%; }
+        100% { width: 100%; }
+      }
+      body.page-loaded #page-loader {
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+      }
+      body.page-loaded #page-loader::after {
+        animation: loading-fade 0.3s ease-out forwards;
+      }
+      @keyframes loading-fade {
+        to { opacity: 0; }
+      }
+    </style>
+    <div id="page-loader"></div>
   </body>
 </html>

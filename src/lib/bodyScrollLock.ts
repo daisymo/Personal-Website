@@ -27,7 +27,6 @@ function unlock() {
   })
 }
 
-/** Ref-counted scroll lock via fixed body — avoids scrollbar layout shift. */
 export function acquireBodyScrollLock(): () => void {
   lockCount += 1
   if (lockCount === 1) lock()

@@ -1,7 +1,6 @@
-import { AnimatePresence } from '../motion/framer'
 import type { ReactNode } from 'react'
 import { ErrorState } from '../components/ui/ErrorState'
-import { LoadingState } from '../components/ui/LoadingState'
+import { HeroSkeleton, SectionSkeleton } from '../components/ui/Skeleton'
 import { useLanguage } from '../hooks/useLanguage'
 
 interface ResumeShellProps {
@@ -9,21 +8,25 @@ interface ResumeShellProps {
 }
 
 export function ResumeShell({ children }: ResumeShellProps) {
-  const { isResumeLoading, resumeError, resume, t, retry } = useLanguage()
+  const { isResumeLoading, resumeError, t, retry } = useLanguage()
 
-  return (
-    <>
-      <AnimatePresence mode="wait">
-        {isResumeLoading ? (
-          <LoadingState key="loading" label={t.common.loading} />
-        ) : null}
-      </AnimatePresence>
+  if (resumeError) {
+    return <ErrorState message={resumeError || t.common.error} retryLabel={t.common.retry} onRetry={retry} />
+  }
 
-      {!isResumeLoading && (resumeError || !resume) ? (
-        <ErrorState message={t.common.error} retryLabel={t.common.retry} onRetry={retry} />
-      ) : null}
+  if (isResumeLoading) {
+    return (
+      <div className="site-shell">
+        <main className="site-main">
+          <div className="site-content">
+            <HeroSkeleton />
+            <SectionSkeleton />
+            <SectionSkeleton />
+          </div>
+        </main>
+      </div>
+    )
+  }
 
-      {resume ? children : null}
-    </>
-  )
+  return <>{children}</>
 }

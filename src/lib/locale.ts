@@ -7,9 +7,7 @@ export function getDocumentLang(locale: Locale) {
 }
 
 export function readStoredLocale(): Locale {
-  if (typeof window === 'undefined') return 'zh'
-  const stored = window.localStorage.getItem(LOCALE_STORAGE_KEY)
-  return stored === 'en' ? 'en' : 'zh'
+  return 'zh'
 }
 
 export function persistLocale(locale: Locale) {

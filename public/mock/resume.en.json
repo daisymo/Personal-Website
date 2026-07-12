@@ -3,7 +3,7 @@
     "name": "Aster",
     "title": "Frontend Engineer",
     "summary": "Experienced in building high-concurrency, reusable frontend architecture from 0 to 1. Deep expertise in the Vue ecosystem with fast switching between Vue and React for team collaboration. Skilled at integrating AI into frontend engineering and product UX, with strong practice in delivery efficiency and intelligent experiences. Led complex systems across smart campus, AI sports, fintech, and connected vehicles, with solid experience in large-scale data visualization, real-time interaction, and LLM frontend integration — with a framework-agnostic approach to architecture design.",
-    "motto": "Trade craftsmanship for every experience people can trust.",
+    "motto": "Crafting digital experiences that matter.",
     "location": "Hangzhou",
     "avatar": null
   },
@@ -16,15 +16,20 @@
       "company": "Personal project",
       "introduction": "A React-based portfolio and online resume site with Chinese/English switching, featuring project showcases, experience, skills, and hobby detail pages. Includes an AI chat assistant that answers visitor questions from resume context, with systematic first-paint and bundle-size optimization.",
       "responsibilities": [
-        "Owned site information architecture and UI across home, project list/detail, and hobby subpages",
-        "Integrated AI chat module for resume-grounded Q&A and visitor interaction",
-        "Applied route lazy loading, deferred mounting, and build chunking to shrink first-load JavaScript"
+        "Designed site architecture with React + TypeScript + Vite, building multi-layer routing for home, project list/detail, and hobby pages",
+        "Integrated DeepSeek API for AI chat assistant with resume context Q&A, improving answer accuracy through prompt optimization",
+        "Implemented Three.js + React Three Fiber for 3D orbital planet animation with dynamic rendering density switching via ResizeObserver",
+        "Built mouse-following effects with Framer Motion using useMotionValue + useSpring + useTransform, supporting staggered entrance animations and reduced motion accessibility",
+        "Applied performance optimization strategies: route lazy loading, component on-demand mounting, build chunking with React.lazy and Suspense",
+        "Set up Tailwind CSS theme system for bilingual Chinese/English switching"
       ],
       "outcomes": [
-        "Fully responsive on mobile; hobby modules support immersive photo, reading, hiking, and music experiences",
-        "Reduced main app chunk to ~21KB while keeping motion effects via LazyMotion"
+        "Fully responsive across mobile, tablet, and desktop; hobby modules feature immersive photography gallery, reading shelf, hiking records, and music player",
+        "Main app chunk compressed to ~21KB, CSS optimized by Tailwind with Gzip only 15.65 KB",
+        "AI chat assistant supports multi-turn conversations for enhanced visitor engagement",
+        "Complete TypeScript type definitions ensure project maintainability"
       ],
-      "skills": ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "React Router"],
+      "skills": ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "React Router", "Three.js"],
       "categories": ["personal", "ai"],
       "image": "/projects/p0.svg"
     },
@@ -36,14 +41,18 @@
       "company": "Hangzhou Lezhixing Education Technology Co., Ltd.",
       "introduction": "AI-driven K12 smart campus management platform covering safety, dorm management, mental health, and home-school communication. Uses face recognition, behavior analysis, and AI alerts for proactive campus safety, processing over 1 million behavioral records daily.",
       "responsibilities": [
-        "Built a reusable Ant Design business component library (trajectory maps, behavior cards, alert lists, dashboard widgets) to improve cross-module reuse",
-        "JSON Schema–driven dynamic forms for academic, dorm, and visitor booking workflows, reducing repetitive development"
+        "Built a reusable Ant Design business component library including trajectory heatmaps, behavior analysis cards, alert lists, and data dashboard components. Established component documentation and usage standards",
+        "Designed JSON Schema-based dynamic form engine supporting automatic form generation for academic, dorm management, and visitor booking scenarios",
+        "Integrated AI facial recognition and behavior analysis modules with real-time data streaming, enabling alert push and visualization",
+        "Established frontend engineering system with code linting, CI/CD pipeline to ensure team collaboration efficiency"
       ],
       "outcomes": [
-        "Canvas rendering and virtual scrolling improved first paint by 30%+",
-        "AI-driven data slicing and intelligent preloading strategies"
+        "Canvas rendering optimization and virtual scrolling improved first screen load speed by ~30%, supporting smooth rendering of millions of daily data records",
+        "Data slicing and preloading strategies improved page switching experience by ~40%",
+        "Component library reuse rate reached 60%+, improving new feature development efficiency by ~30%",
+        "Established frontend monitoring system for error tracking and performance monitoring, improving issue location efficiency by ~50%"
       ],
-      "skills": ["Vue3", "React", "TypeScript", "Ant Design", "ECharts"],
+      "skills": ["Vue3", "React", "TypeScript", "Vite", "Ant Design", "ECharts"],
       "categories": ["work", "ai"],
       "image": "/projects/p1.svg"
     },
@@ -55,15 +64,18 @@
       "company": "Jiangsu Lingkang Electronics Development Co., Ltd. (Hangzhou Branch)",
       "introduction": "National fitness health management and smart sports ecosystem platform integrating fitness testing, classes, events, and administration. Supports real-time collection and analysis of large-scale motion data with personalized exercise guidance.",
       "responsibilities": [
-        "Designed unified login and permission system for seamless cross-platform access across multiple systems",
-        "Supported legacy device Bluetooth and multiple AI motion capture modes for stable, real-time data",
-        "Component library and modular architecture reduced duplicate code 30%+"
+        "Designed unified authentication and permission management system, integrating CAS single sign-on for cross-system access with data security",
+        "Led Bluetooth device access layer design, compatible with Bluetooth 4.0 and new AI motion capture devices for real-time data collection",
+        "Built Uni-app cross-end component library and modular architecture, establishing component development standards to promote code reuse",
+        "Integrated AI motion recognition algorithm for rope skipping counting and running posture analysis"
       ],
       "outcomes": [
-        "Real-time personalized exercise prescriptions — upgrading reports from visualization to conversation",
-        "Parameterized configuration enabled third-party mini programs to launch faster, cutting delivery cycle by 40%"
+        "Real-time motion data collection and AI analysis generate personalized exercise prescriptions, upgrading data report interaction experience",
+        "Parameterized configuration system supports third-party partners to customize mini programs quickly, reducing delivery cycle by ~30%",
+        "Component reuse rate improved to 60%+, team development efficiency improved by ~25%",
+        "Bluetooth connection stability reached 95%+, data transmission latency controlled within acceptable range"
       ],
-      "skills": ["Vue3", "Uni-app", "Pinia", "TypeScript", "AI Sports"],
+      "skills": ["Vue3", "Uni-app", "Pinia", "Vite", "TypeScript", "Ant Design", "ECharts"],
       "categories": ["work", "ai"],
       "image": "/projects/p2.svg"
     },
@@ -75,14 +87,18 @@
       "company": "Zhejiang Yiti Technology Co., Ltd.",
       "introduction": "AI sports education platform based on computer vision. Gamifies motion through intelligent behavior analysis, supporting rope skipping, running, and exam-oriented training in a teach–train–assess closed loop.",
       "responsibilities": [
-        "Delivered high-reuse component library and development standards, reducing redundant code 30%",
-        "Built data visualization dashboards supporting real-time decisions for sports events and fitness testing"
+        "Designed and delivered a highly reusable component library, establishing development standards and code review mechanisms to promote component standardization and documentation",
+        "Architected data visualization dashboard system supporting real-time sports event data display, fitness test analysis, and AI motion recognition monitoring",
+        "Integrated AI image recognition module for real-time counting and posture analysis of rope skipping, running and other special training",
+        "Built frontend performance monitoring system for key metrics tracking and error alerts"
       ],
       "outcomes": [
-        "Resource cleanup and caching strategies improved overall platform performance 20%+",
-        "Optimized Canvas rendering pipeline for higher-quality AI motion recognition visuals"
+        "Resource cleanup, caching strategies, and code splitting improved platform performance by ~25%, with first screen load time optimized",
+        "Optimized Canvas rendering pipeline, AI motion recognition frame rate stabilized above 30fps",
+        "Component library covers ~70% of business scenarios, code reuse rate reached 50%+, reducing requirement delivery cycle by ~20%",
+        "Established frontend monitoring system, improving online issue detection efficiency by ~50%"
       ],
-      "skills": ["Vue3", "Canvas", "AMap", "Data Dashboard"],
+      "skills": ["Vue3", "Vue2", "Vite", "Webpack", "Ant Design", "AMap", "Canvas"],
       "categories": ["work", "ai"],
       "image": "/projects/p3.svg"
     },
@@ -94,15 +110,18 @@
       "company": "Hangzhou Weiyi Information Technology Co., Ltd.",
       "introduction": "Management platform for bancassurance teams with permissions, online support, audit logs, deep WeCom integration, and complex insurance product combination calculations.",
       "responsibilities": [
-        "Permission system and WeCom scan login for improved security and usability",
-        "Search, filters, and audit trails for efficient, traceable data queries",
-        "Integrated online customer service module to improve user satisfaction"
+        "Designed RBAC-based permission management system, integrated WeCom scan login for access control and data isolation",
+        "Designed data search, filtering, and audit trail system supporting complex query conditions and data traceability",
+        "Designed and integrated online customer service module with real-time messaging, agent assignment, and session management",
+        "Led frontend implementation of insurance product combination calculation engine supporting product rule configuration and premium calculation"
       ],
       "outcomes": [
-        "Data visualization to support business analysis",
-        "Performance optimization and bundle strategy reduced package size ~35%"
+        "Established data visualization system for real-time business data analysis and visual reports to support management decisions",
+        "Code splitting, lazy loading, and resource compression reduced bundle size by ~30%, improving first screen load speed by ~25%",
+        "Permission system covers core business scenarios with effective data security",
+        "Online customer service module improved user issue response efficiency"
       ],
-      "skills": ["Vue2", "Webpack", "Ant Design", "WeCom"],
+      "skills": ["Vue2", "Webpack", "Ant Design", "WeCom", "ECharts"],
       "categories": ["work"],
       "image": "/projects/p4.svg"
     },
@@ -114,15 +133,18 @@
       "company": "Hangzhou Weiyi Information Technology Co., Ltd.",
       "introduction": "Cross-end service platform for loan brokers and clients, supporting mini programs (broker side) and H5 (client side) with fast iteration, high stability, and precise behavioral analytics.",
       "responsibilities": [
-        "Introduced Taro framework for rapid iteration and long-term maintainability",
-        "Built compatibility component library to resolve Vant styling and interaction issues on H5"
+        "Led technology selection, introduced Taro framework for cross-end development supporting mini programs (broker side) and H5 (client side)",
+        "Designed and built cross-end compatibility component library to resolve Vant component styling and interaction differences on H5",
+        "Integrated Alibaba Cloud captcha and data tracking system for API security protection and user behavior tracking",
+        "Optimized WeChat mini program performance with subpackage loading and lazy loading strategies"
       ],
       "outcomes": [
-        "Alibaba Cloud captcha and event tracking to prevent abusive API calls",
-        "WeChat APIs for precise user behavioral analytics",
-        "Subpackages and lazy loading: core page load speed up 40%, bundle size down 35%"
+        "Alibaba Cloud captcha and request rate limiting effectively prevented malicious API attacks",
+        "Established data tracking system for user behavior analysis to support product decisions",
+        "Subpackage and lazy loading strategies improved core page load speed by ~35%, reducing mini program bundle size by ~30%",
+        "Component library covers ~70% of business scenarios, reducing cross-end compatibility issues"
       ],
-      "skills": ["Taro", "Vue2", "Vant", "TypeScript"],
+      "skills": ["Taro", "Vue2", "Vant", "TypeScript", "Webpack", "Alibaba Cloud", "WeCom"],
       "categories": ["work"],
       "image": "/projects/p5.svg"
     },
@@ -134,34 +156,68 @@
       "company": "Hangzhou Cherries Intelligence Technology Co., Ltd.",
       "introduction": "Traffic safety monitoring platform built on in-house vehicle hardware, providing real-time vehicle tracking, route replay, geofencing, and heatmap analysis.",
       "responsibilities": [
-        "Independently built monitoring dashboard, route replay, driver info, and incentive modules",
-        "Deep integration of AMap and Tencent live video stream SDKs"
+        "Independently developed core frontend modules including real-time monitoring dashboard, vehicle trajectory replay, driver information management, and bonus distribution system",
+        "Wrapped AMap SDK for real-time vehicle positioning, trajectory tracking, geofencing, and optimized map rendering performance",
+        "Integrated Tencent TcPlayer SDK for real-time vehicle video monitoring and historical video playback",
+        "Designed complex table component supporting large data filtering, sorting, and search"
       ],
       "outcomes": [
-        "Optimized complex table filtering and search logic, improving query efficiency 50%",
-        "Led UI system refactor for improved interaction consistency"
+        "Optimized table filtering and search logic with virtual scrolling, improving query efficiency by ~40%",
+        "UI system optimization with design standards improved interaction consistency",
+        "Map rendering performance optimized to support multiple vehicles online simultaneously",
+        "Video streaming playback stable, meeting real-time monitoring requirements"
       ],
-      "skills": ["Vue2", "Element UI", "ECharts", "AMap"],
+      "skills": ["Vue2", "Element UI", "Webpack", "ECharts", "Tencent TcPlayer", "AMap"],
       "categories": ["work"],
       "image": "/projects/p6.svg"
     },
     {
       "id": "p7",
+      "slug": "spider-data-crawler",
+      "title": "Data Crawling & Visualization System",
+      "summary": "Judicial auction & real estate data crawling · visualization & management",
+      "company": "Hangzhou Dingya Law Firm",
+      "introduction": "Built a scheduled data crawling and integration system for judicial auctions, real estate transactions, and other public data. Developed supporting data visualization platform and admin management system to support legal business data analysis and decision-making.",
+      "responsibilities": [
+        "Designed scalable crawler task scheduling system supporting multi-site, multi-task parallel execution",
+        "Built proxy pool mechanism with automatic proxy rotation and health detection",
+        "Implemented logging monitoring and retry mechanism for data integrity and traceability",
+        "Developed data visualization platform using ECharts for statistics, trend analysis, and keyword alerts",
+        "Built task management backend with crawler configuration, monitoring dashboard, and alert system"
+      ],
+      "outcomes": [
+        "Crawler task scheduling and proxy pool mechanism supporting multiple data sources",
+        "Logging and retry mechanism improved data crawling stability to 90%+",
+        "Incremental data update strategy with Excel/CSV export support",
+        "Data traceability system supporting source tracking and version management",
+        "Visualization platform helps lawyers quickly locate target assets, improving data retrieval efficiency ~40%"
+      ],
+      "skills": ["Python", "MySQL", "Scrapy", "Vue.js", "ECharts", "Proxy Pool", "Scheduled Tasks"],
+      "categories": ["work"],
+      "image": "/projects/p7.svg"
+    },
+    {
+      "id": "p8",
       "slug": "16hour-news",
       "title": "16HOUR News Platform",
       "summary": "Lifestyle news · WebView app & campaign H5",
       "company": "Chengdu Tuoyuan Culture Communication Co., Ltd.",
       "introduction": "Lifestyle news platform covering international, domestic, and local topics with high-frequency campaign operations and multi-end delivery.",
       "responsibilities": [
-        "Owned daily iterations and large-scale campaign H5, solving cross-device compatibility",
-        "Enhanced CMS article editing features to improve content production efficiency"
+        "Responsible for WebView App daily iteration development and large-scale marketing campaign H5 page development",
+        "Led multi-end adaptation and compatibility solution design, solving iOS/Android version and browser compatibility issues",
+        "Designed rich text editor supporting mixed text/image layout, video embedding, and style customization",
+        "Optimized page loading performance with resource preloading, lazy loading, and caching strategies"
       ],
       "outcomes": [
-        "Improved campaign landing page load and interaction experience"
+        "Campaign landing page performance optimized with reduced first screen load time and improved interaction smoothness",
+        "Multi-end compatibility issues significantly reduced, lowering user complaint rate",
+        "Rich text editor with complete features supporting multiple content formats, improving content production efficiency",
+        "Successfully supported multiple large-scale marketing campaigns with stable system operation"
       ],
-      "skills": ["jQuery", "H5", "WebView", "WeChat SDK"],
+      "skills": ["jQuery", "H5", "WebView", "Zepto", "WeChat SDK", "Magic Window", "Baidu Maps"],
       "categories": ["work"],
-      "image": "/projects/p7.svg"
+      "image": "/projects/p8.svg"
     }
   ],
   "experience": [
@@ -220,8 +276,8 @@
       "items": [
         "JavaScript (ES6+)",
         "TypeScript",
-        "Browser rendering",
-        "Networking protocols"
+        "Browser rendering principles",
+        "Network protocols"
       ]
     },
     {
@@ -239,6 +295,7 @@
       "items": [
         "Taro",
         "Uni-app",
+        "WebView",
         "WeChat Mini Programs",
         "Webpack",
         "Vite",
@@ -249,6 +306,7 @@
       "category": "Performance & UI",
       "items": [
         "First paint / code splitting",
+        "Caching strategies",
         "Virtual lists",
         "Frontend monitoring & tracking",
         "Ant Design",
@@ -260,7 +318,10 @@
     {
       "category": "AI & More",
       "items": [
-        "Cursor / Copilot / ChatGPT",
+        "Cursor",
+        "ChatGPT",
+        "Copilot",
+        "Claude",
         "AIGC engineering",
         "Python data scraping",
         "OAuth2 / CAS SSO"
@@ -316,18 +377,31 @@
         "detail": "Mostly tech, design, and essays — a steady habit on commutes and before sleep.",
         "reading": {
           "read": [
-            { "id": "r1", "title": "Refactoring", "author": "Martin Fowler" },
-            { "id": "r2", "title": "The Design of Everyday Things", "author": "Don Norman" },
-            { "id": "r3", "title": "The Little Prince", "author": "Saint-Exupéry" },
-            { "id": "r4", "title": "The Mythical Man-Month", "author": "Fred Brooks" }
+            { "id": "r1", "title": "What Kind of Life Do You Want to Live?", "author": "Heike Faller" },
+            { "id": "r2", "title": "Cakes and Ale", "author": "W. Somerset Maugham" },
+            { "id": "r3", "title": "Freakonomics", "author": "Robert H. Frank" },
+            { "id": "r4", "title": "A Cloud a Day", "author": "Gavin Pretor-Pinney" },
+            { "id": "r5", "title": "Let Go, Allow Everything to Happen", "author": "Saverio Tomasella" },
+            { "id": "r6", "title": "Flora's Feast", "author": "Margaret Mee" },
+            { "id": "r7", "title": "The Book of Flowerless Plants", "author": "Sidonie-Gabrielle Colette" },
+            { "id": "r8", "title": "Tractatus Logico-Philosophicus", "author": "Ludwig Wittgenstein" },
+            { "id": "r9", "title": "Chestnuts in the Dark", "author": "Koi Ogawa" },
+            { "id": "r10", "title": "Life After Life", "author": "Raymond A. Moody" },
+            { "id": "r11", "title": "Before the Coffee Gets Cold", "author": "Toshikazu Kawaguchi" },
+            { "id": "r12", "title": "The Lover Who Doesn't Exist", "author": "Yunzhu" }
           ],
           "reading": [
-            { "id": "r5", "title": "Domain-Driven Design", "author": "Eric Evans" },
-            { "id": "r6", "title": "The Non-Designer's Design Book", "author": "Robin Williams" }
+            { "id": "r13", "title": "She Came to Split the Mountain", "author": "Binghezhai" },
+            { "id": "r14", "title": "The Prince", "author": "Niccolò Machiavelli" },
+            { "id": "r15", "title": "The Comfort of Missing Out", "author": "Tommy Butler" },
+            { "id": "r16", "title": "The Psychology of Money", "author": "Morgan Housel" }
           ],
           "wish": [
-            { "id": "r7", "title": "Gödel, Escher, Bach", "author": "Hofstadter" },
-            { "id": "r8", "title": "Invisible Cities", "author": "Calvino" }
+            { "id": "r17", "title": "Circular Justice", "author": "Luo Xiang" },
+            { "id": "r18", "title": "The Universe in Bite-Sized Chunks", "author": "Becky Smethurst" },
+            { "id": "r19", "title": "Finite and Infinite Games", "author": "James Carse" },
+            { "id": "r20", "title": "Siddhartha", "author": "Hermann Hesse" },
+            { "id": "r21", "title": "Enchanted Brain", "author": "Marian C. Diamond, Arnold B. Scheibel, Lawrence M. Elson" }
           ]
         }
       },
@@ -358,45 +432,6 @@
         "name": "Archery",
         "icon": "🏹",
         "detail": "Focus on breath and form — archery as a way to reset and concentrate."
-      },
-      {
-        "id": "h5",
-        "slug": "music",
-        "name": "Music",
-        "icon": "🎵",
-        "detail": "Instrumental and ambient playlists while working; occasional guitar to unwind.",
-        "tracks": [
-          {
-            "id": "t1",
-            "title": "Cornfield Chase",
-            "artist": "Hans Zimmer",
-            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-          },
-          {
-            "id": "t2",
-            "title": "Experience",
-            "artist": "Ludovico Einaudi",
-            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
-          },
-          {
-            "id": "t3",
-            "title": "River Flows in You",
-            "artist": "Yiruma",
-            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
-          },
-          {
-            "id": "t4",
-            "title": "Blizzard",
-            "artist": "Ryuichi Sakamoto",
-            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
-          },
-          {
-            "id": "t5",
-            "title": "Merry Christmas Mr. Lawrence",
-            "artist": "Ryuichi Sakamoto",
-            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
-          }
-        ]
       }
     ]
   },

@@ -24,6 +24,7 @@ export default defineConfig(({ mode }) => {
   const chatConfig = buildChatConfigFromEnv(env)
 
   return {
+    base: process.env.VITE_BASE_PATH || env.VITE_BASE_PATH || '/',
     plugins: [
       react(),
       tailwindcss(),
@@ -34,6 +35,7 @@ export default defineConfig(({ mode }) => {
       modulePreload: {
         polyfill: false,
       },
+      minify: 'esbuild',
       rollupOptions: {
         output: {
           manualChunks(id) {
@@ -41,6 +43,8 @@ export default defineConfig(({ mode }) => {
             if (id.includes('/i18n/en')) return 'i18n-en'
             if (id.includes('framer-motion')) return 'vendor-motion'
             if (id.includes('react-router')) return 'vendor-router'
+            if (id.includes('@react-three')) return 'vendor-three'
+            if (id.includes('/three/')) return 'vendor-three'
             if (
               id.includes('/react/') ||
               id.includes('/react-dom/') ||
@@ -49,8 +53,15 @@ export default defineConfig(({ mode }) => {
               return 'vendor-react'
             }
           },
+          chunkFileNames: 'assets/js/[name]-[hash].js',
+          entryFileNames: 'assets/js/[name]-[hash].js',
+          assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
         },
       },
+    },
+    optimizeDeps: {
+      include: ['react', 'react-dom', 'framer-motion'],
+      exclude: ['three', '@react-three/fiber', '@react-three/drei'],
     },
   }
 })

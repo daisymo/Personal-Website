@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { AboutTag } from '../../types/resume'
 import { useLanguage } from '../../hooks/useLanguage'
+import { publicPath } from '../../lib/publicPath'
 import { OverlayModal } from '../ui/OverlayModal'
 import { HobbyDetailShell } from './HobbyDetailShell'
+import { LazyImage } from '../ui/LazyImage'
 
 interface HobbyPhotographyDetailProps {
   hobby: AboutTag
@@ -63,7 +65,7 @@ export function HobbyPhotographyDetail({ hobby }: HobbyPhotographyDetailProps) {
                 <span className="photo-folio__index" aria-hidden>
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <img src={photo.src} alt={photo.caption ?? ''} loading="lazy" decoding="async" />
+                <LazyImage src={publicPath(photo.src)} alt={photo.caption ?? ''} />
               </button>
               {photo.caption ? <figcaption className="photo-folio__caption">{photo.caption}</figcaption> : null}
             </figure>
@@ -98,7 +100,7 @@ export function HobbyPhotographyDetail({ hobby }: HobbyPhotographyDetailProps) {
               <img
                 key={activePhoto.src}
                 className="photo-lightbox__image"
-                src={activePhoto.src}
+                src={publicPath(activePhoto.src)}
                 alt={activePhoto.caption ?? ''}
                 decoding="async"
               />

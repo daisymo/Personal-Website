@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, useReducedMotion } from '../../motion/framer'
+import { AnimatePresence, motion } from '../../motion/framer'
 import { Link, useLocation } from 'react-router-dom'
 import { useEffect, useMemo, useState } from 'react'
 import { useBodyScrollLock } from '../../hooks/useBodyScrollLock'
@@ -32,7 +32,7 @@ function NavLinks({
         {navItems.map((item) => (
           <li key={item.id}>
             <Link
-              to={navHref(item.id)}
+              to={navHref()}
               state={navScrollState(item.id)}
               className={linkClassName(item.id)}
               onClick={(event) => {
@@ -53,9 +53,8 @@ function NavLinks({
 }
 
 export function SiteNav() {
-  const { t, toggleLocale, resume } = useLanguage()
+  const { t, resume } = useLanguage()
   const { openContact } = useContactModal()
-  const reduced = useReducedMotion()
   const scrolled = useScrollThreshold(8)
   const location = useLocation()
   const [drawerOpen, setDrawerOpen] = useState(false)
@@ -101,14 +100,6 @@ export function SiteNav() {
           />
 
           <div className="site-header__actions">
-            <motion.button
-              type="button"
-              onClick={toggleLocale}
-              className="header-action lang-toggle"
-              whileTap={reduced ? undefined : { scale: 0.97 }}
-            >
-              {t.common.langToggle}
-            </motion.button>
             <button type="button" className="header-action btn-contact" onClick={openContact}>
               {t.nav.contact}
             </button>
@@ -158,9 +149,6 @@ export function SiteNav() {
               <div className="nav-drawer__actions">
                 <button type="button" className="header-action btn-contact btn-contact--block" onClick={handleOpenContact}>
                   {t.nav.contact}
-                </button>
-                <button type="button" className="header-action lang-toggle lang-toggle--block" onClick={toggleLocale}>
-                  {t.common.langToggle}
                 </button>
               </div>
             </motion.div>

@@ -14,3 +14,9 @@ createRoot(document.getElementById('root')!).render(
     </LanguageProvider>
   </StrictMode>,
 )
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.body.classList.add('page-loaded')
+  }, 200)
+})

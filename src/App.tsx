@@ -28,9 +28,11 @@ function DocumentTitle() {
   return null
 }
 
+const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '') || undefined
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename}>
       <DocumentTitle />
       <ResumeShell>
         <Suspense fallback={null}>

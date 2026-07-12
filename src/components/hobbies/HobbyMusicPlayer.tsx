@@ -35,7 +35,7 @@ export function HobbyMusicPlayer({ tracks }: HobbyMusicPlayerProps) {
     if (playing) {
       void audio.play().catch(() => setPlaying(false))
     }
-  }, [active?.audio, active?.id])
+  }, [active?.audio, active?.id, playing])
 
   useEffect(() => {
     const audio = audioRef.current

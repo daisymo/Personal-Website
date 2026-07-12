@@ -1,4 +1,5 @@
 import type { Project } from '../types/resume'
+import { publicPath } from './publicPath'
 
 const COVER_HUES: Record<string, number> = {
   p0: 214,
@@ -16,7 +17,8 @@ export function getProjectCoverHue(projectId: string, index: number): number {
 }
 
 export function getProjectCoverSrc(project: Project): string | null {
-  return project.image?.trim() || null
+  const image = project.image?.trim()
+  return image ? publicPath(image) : null
 }
 
 export function getProjectCoverInitial(title: string): string {
